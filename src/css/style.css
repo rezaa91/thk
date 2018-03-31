@@ -8,36 +8,37 @@ body{
     height:100%;
 }
 
-.navbar{
-    background-color:white;
-    height:60px;
-    display:block;
-    position:fixed;
-    width:100%;
-    z-index:1;
-}
-
-
 
 /*INDEX.PHP*/
+/*header*/
 header{
     padding:20vh 0vh;
     background-color:black;
     color:white;
 }
-
 #DL {
     margin-top:5px;
 }
 
+/*video*/
+#video{
+    width:100%;
+    background-color:black;
+    padding-bottom:20px;
+}
 
+/*music*/
 #music{
-    margin:50px auto;
+    margin-top:50px;
+}
+
+#music-carousel{
+    margin:20px auto 50px;
     text-align:center;
     background-color:black;
 }
 
-#music img{
+#music-carousel img{
     height:300px;
     width:300px;
 }
@@ -47,4 +48,15 @@ header{
 footer{
     clear:both;
     padding:20px 0px;
+}
+#social_links{
+    font-size:30px;
+}
+#social_links a{
+    color:rgb(46, 47, 48);
+    margin:0px 10px;
+    padding:0px 4px;
+}
+#social_links a:hover{
+    color:black;
 }
