@@ -1,0 +1,27 @@
+{
+  "name": "hybrid-kid",
+  "version": "1.0.0",
+  "description": "The hybrid kid information",
+  "main": "src/js/app.js",
+  "scripts": {
+    "build": "npx webpack --watch"
+  },
+  "author": "Ali Issaee",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "font-awesome": "^4.7.0",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
+  }
+}
