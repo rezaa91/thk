@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100%;
+}
+
+.navbar{
+    background-color:white;
+    height:60px;
+    display:block;
+    position:fixed;
+    width:100%;
+    z-index:1;
+}
+
+
+
+/*INDEX.PHP*/
+header{
+    padding:20vh 0vh;
+    background-color:black;
+    color:white;
+}
+
+#DL {
+    margin-top:5px;
+}
+
+
+#music{
+    margin:50px auto;
+    text-align:center;
+    background-color:black;
+}
+
+#music img{
+    height:300px;
+    width:300px;
+}
+
+
+/*FOOTER STYLING*/
+footer{
+    clear:both;
+    padding:20px 0px;
+}
