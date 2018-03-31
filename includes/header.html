@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" /> <!--char set-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> <!--make responsive-->
+        
+        <!--other meta tags for SEO-->
+        <meta name="keywords" content="hull, rapper, the hybrid kid, hip hop, hiatus" />
+        <meta name="author" content="Ali Issaee" />
+        <meta name="description" content="The hybrid kid official website" />
+                        
+        
+        <title><?php if(isset($page_title)){ echo $page_title; } ?></title>
+        
+        <!--js compiled file-->
+        <script src="./dist/bundle.js"></script>
+        
+        <!--font awesome CDN - REPLACE THIS WITH DEPENDENCY AT LATER DATE -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+        
+        <!--css stylesheet-->
+        <link rel="stylesheet" href='./src/css/style.css' />
+    </head>
+    
+    <body>
+       
+        <div id="wrapper">
+           
+           
+            <!--create default navbar-->
+            <nav class="navbar navbar-expand-md navbar-light" role="navigation">
+                <div class="container-fluid">
+                    <!-- logo -->
+                    <a href='#home' class='navbar-brand'>THK</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    
+                    <!--menu items-->
+                    <div class="collapse navbar-collapse" id="mainNavBar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a href='#home' class="nav-link">HOME</a></li>
+                            <li class="nav-item"><a href='#music' class="nav-link">MUSIC</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav><!-- end of nav-->
+            
