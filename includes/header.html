@@ -13,6 +13,7 @@
                         
         
         <title><?php if(isset($page_title)){ echo $page_title; } ?></title>
+        <link rel="icon" href='./src/media/img/logo.jpg' />
         
         <!--js compiled file-->
         <script src="./dist/bundle.js"></script>
@@ -22,6 +23,7 @@
         
         <!--css stylesheet-->
         <link rel="stylesheet" href='./src/css/style.css' />
+        
     </head>
     
     <body>
@@ -44,11 +46,11 @@
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item"><a href='#home' class="nav-link">HOME</a></li>
                             <li class="nav-item"><a href='#music' class="nav-link">MUSIC</a></li>
-                            <li class="nav-item"><a href='#music' class="nav-link">CONTACT</a></li>
+                            <li class="nav-item"><a href='#contact' class="nav-link">CONTACT</a></li>
                         </ul>
                         <ul class="navbar-nav navbar-right">
-                            <li class="nav-item">
-                                <a href='http://www.datpiff.com/The-Hybrid-Kid-Hiatus-mixtape.889767.html' target="_blank" class="btn btn-lg btn-warning" title="download Hiatus">GET HIATUS</a>
+                            <li class="nav-item" id="dl_link">
+                                <a href='http://www.datpiff.com/The-Hybrid-Kid-Hiatus-mixtape.889767.html' target="_blank" class="btn btn-lg btn-warning" title="download Hiatus" id="dl">GET HIATUS</a>
                             </li>
                         </ul>
                     </div>
