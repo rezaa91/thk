@@ -8,16 +8,27 @@ body{
     height:100%;
 }
 
+li{
+    list-style: none;
+}
+
 
 /*INDEX.PHP*/
 /*header*/
 header{
-    padding:20vh 0vh;
+    padding:200px 0px;
     background-color:black;
     color:white;
 }
 #DL {
     margin-top:5px;
+    font-weight:bold;
+}
+#hiatus{
+    color:orange;
+}
+#header_text{
+    height:150px;
 }
 
 /*video*/
@@ -43,9 +54,43 @@ header{
     width:300px;
 }
 
+/*contact*/
+textarea{
+    resize:none;
+}
+.incoming{
+    font-weight:bold;
+}
+
+
+#upcoming_events{
+    height:40%;
+}
+#previous_events{
+    height:40%;
+}
+.scroll{
+    height:75%;
+    overflow-y:auto;
+    background-color:rgb(247, 248, 249);
+    border-radius: 10px;
+    padding:5px;
+}
+
+.validation{
+    border: 0.5px solid red;
+    box-shadow: 0px 0px 5px red;
+}
+.disabled{
+    
+}
+
+
 
 /*FOOTER STYLING*/
 footer{
+    margin-top:15px;
+    border-top:1px solid black;
     clear:both;
     padding:20px 0px;
 }
