@@ -3,6 +3,39 @@
 $page_title = "THE HYBRID KID";
 include('includes/header.html');
 
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    //handle form
+    if(isset($_POST['name']) && !empty($_POST['name'])){
+        $name = $_POST['name'];
+    }else{
+        $name = null;
+    }
+    
+    if(isset($_POST['email']) && !empty($_POST['email'])){
+        $email = $_POST['email'];
+    }else{
+        $email = null;
+    }
+    
+    if(isset($_POST['mobile']) && !empty($_POST['mobile'])){
+        $mobile = $_POST['mobile'];
+    }else{
+        $mobile = null;
+    }
+    
+    if(isset($_POST['message']) && !empty($_POST['message'])){
+        $message = $_POST['message'];
+    }else{
+        $message = null;
+    }
+    
+    //if form values correct
+    if($name && $email && $mobile && $message){
+        //send email
+    }
+    
+}
+
 ?>
 
 <!--create header-->
@@ -117,7 +150,7 @@ include('includes/header.html');
         </div>
         
         <div class="col-md-6">
-            <form>
+            <form action="index.php" method="POST">
                 <div class="form-group" id="form">
                     <input type="text" name="name" class="form-control" placeholder="Name/Organisation" />
                     <input type="email" name="email" class="form-control" placeholder="Email@Example.co.uk" />
