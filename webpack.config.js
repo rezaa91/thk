@@ -8,22 +8,15 @@ module.exports = {
         rules:[
             {
                 test:/\.css$/,
-                use:[
-                    {loader:'style-loader'},
-                    {loader:'css-loader'}
-                ]
+                loader: "style-loader!css-loader"
             },
             {
                 test:/\.js$/,
-                use:[
-                    {
-                        loader:"babel-loader",
-                        options:{
-                            exclude:/node_modules/,
-                            presets:['env']
-                        }
-                    }
-                ]
+                exclude:/node_modules/,
+                loader: 'babel-loader',
+                options:{
+                    presets:['env']
+                }
             }
         ]
     }
