@@ -75,7 +75,7 @@ $(function(){
                 
             }else{
                 submit.classList.add('btn-danger');
-                submit.value = "ERROR!";
+                submit.value = "FILL THE FULL FORM!";
             }
         })
         
