@@ -40,11 +40,11 @@ header{
 
 /*music*/
 #music{
-    margin-top:50px;
+    padding-top:70px;
 }
 
 #music-carousel{
-    margin:20px auto 50px;
+    margin:20px auto 0px;
     text-align:center;
     background-color:black;
 }
@@ -55,13 +55,16 @@ header{
 }
 
 /*contact*/
+#contact{
+    padding-top: 70px;
+}
+
 textarea{
     resize:none;
 }
 .incoming{
     font-weight:bold;
 }
-
 
 #upcoming_events{
     height:40%;
@@ -81,9 +84,7 @@ textarea{
     border: 0.5px solid red;
     box-shadow: 0px 0px 5px red;
 }
-.disabled{
-    
-}
+
 
 
 
@@ -104,4 +105,16 @@ footer{
 }
 #social_links a:hover{
     color:black;
+}
+
+
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width:360px) {
+    #main_header{
+        font-size:32px;
+    }
+    #social_links{
+        font-size:24px;
+    }
 }
