@@ -32,6 +32,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     //if form values correct
     if($name && $email && $mobile && $message){
         //send email
+        $to = "info@thehybridkid.uk";
+        $message = wordwrap($message, 70);
+        $message = htmlentities($message);
+        $subject = "WEBSITE FORM ENQUIRY";
+        $email = htmlentities($email);
+        $headers = "From: $email";
+        
+        mail($to, $subject, $message, $headers);
+        
     }
     
 }
