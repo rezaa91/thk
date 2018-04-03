@@ -26,6 +26,24 @@ $(function(){
         let elements = form.elements; //elements
         let submit = document.getElementById('submit'); //submit btn
         
+        
+        //adjusts DOM if successful form post made
+        function successfulPost(){
+            submit.classList.add('btn-success');
+            for(let i = 0; i<elements.length-1; i++){
+                elements[i].setAttribute('readonly',true);
+            }
+        }
+        
+        
+        //if session storage 'btn_val' exists from previous successful form, do not allow more attempts
+        if(sessionStorage.getItem('btn_val')){
+            submit.value = sessionStorage.getItem('btn_val');
+            successfulPost();
+        }
+        
+        
+        
         let formSubmitted = false; //flag var
         
         //check inputs - add error validation class to inputs with no value when blurred
@@ -55,7 +73,6 @@ $(function(){
         }
         
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); //prevent form firing
             let haveVals = check(); //check all form inputs have a value
             
             if(!formSubmitted && haveVals){//if form not previously submitted and all form values have inputs
@@ -63,22 +80,23 @@ $(function(){
                     submit.classList.remove('btn-danger'); //remove class if previous form submissions had errors
                 }
                 
-                submit.classList.add('btn-success');
+                successfulPost(); //run function
                 submit.value = "SENT"; //inform user form has been sent
                 formSubmitted = true; //set flag var to true
                 submit.disabled = true;
+                sessionStorage.setItem('btn_val',submit.value);
                 
-                //make form inputs readonly
-                for(let i = 0; i<elements.length-1; i++){
-                    elements[i].setAttribute('readonly',true);
-                }
+                
                 
             }else{
+                e.preventDefault();
+                if(submit.value === "SENT"){
+                    return;
+                }
                 submit.classList.add('btn-danger');
                 submit.value = "FILL THE FULL FORM!";
             }
-        })
-        
+        })     
     }());
     
 })
