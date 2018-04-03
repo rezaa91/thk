@@ -4,7 +4,7 @@
   "description": "The hybrid kid information",
   "main": "src/js/app.js",
   "scripts": {
-    "start": "npx webpack --watch"
+    "start": "npx webpack --watch -p"
   },
   "author": "Ali Issaee",
   "license": "ISC",
@@ -21,6 +21,7 @@
     "css-loader": "^0.28.11",
     "font-awesome": "^4.7.0",
     "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13",
     "webpack-merge": "^4.1.2"
